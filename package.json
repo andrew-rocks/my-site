@@ -13,10 +13,14 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "pretty": "npx prettier . --write"
   },
   "dependencies": {
     "gatsby": "^5.11.0",
+    "gatsby-plugin-image": "^3.12.3",
+    "gatsby-plugin-sharp": "^5.12.3",
+    "gatsby-source-filesystem": "^5.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -24,7 +28,9 @@
     "@types/node": "^20.3.3",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-config-react-app": "^7.0.1",
+    "prettier": "3.0.3",
     "typescript": "^5.1.6"
   }
 }
