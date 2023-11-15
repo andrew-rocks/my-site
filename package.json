@@ -14,7 +14,11 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "pretty": "npx prettier . --write"
+    "prettier": "npx prettier src --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "lint": "npx eslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
     "gatsby": "^5.11.0",
@@ -25,6 +29,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@stylistic/eslint-plugin": "^1.2.0",
     "@types/node": "^20.3.3",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",

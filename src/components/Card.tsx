@@ -3,12 +3,12 @@ import * as React from "react";
 type CardProps = {
   title: string;
   subtitle: string;
-  body: any;
-  footer: any;
+  body: React.ReactNode;
+  footer: React.ReactNode;
 };
 
 const Card = (props: CardProps) => {
-  const {title, subtitle, body, footer} = props;
+  const { title, subtitle, body, footer } = props;
 
   return (
     <div className="card">

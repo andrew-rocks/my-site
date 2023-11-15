@@ -2,17 +2,19 @@ import * as React from "react";
 import { HeadFC, PageProps } from "gatsby";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
-import Card from "../components/Card";
+import Card from "../components/card";
+import Seo from "../components/seo";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <Layout pageTitle={"Andrew Rocks"}>
-      <p>I'm a Software Engineer.</p>
+    <Layout pageTitle={"My Portfolio Website"}>
+      <p>I&apos;m a Software Engineer.</p>
       <StaticImage
-        alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
+        alt="Professional headshot of Andrew Rocks, wearing navy suit and green tie"
         src="../images/headshot.jpeg"
+        width={400}
       />
-      <Card 
+      <Card
         title="University Of Notre Dame"
         subtitle="I went here"
         body="I took classes"
@@ -22,6 +24,6 @@ const IndexPage: React.FC<PageProps> = () => {
   );
 };
 
-export const Head: HeadFC = () => <title>Andrew Rocks</title>;
+export const Head: HeadFC = () => <Seo title="Home Page" />;
 
 export default IndexPage;
