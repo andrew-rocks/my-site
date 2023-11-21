@@ -6,20 +6,27 @@ import { PageProps, graphql } from "gatsby";
 const BlogPage = ({ data }: PageProps<Queries.BlogPageQuery>) => {
   return (
     <Layout pageTitle="My Blog Posts">
-      <ul>
-        {data.allFile.nodes.map((node) => (
-          <li key={node.name}>{node.name}</li>
-        ))}
-      </ul>
+      {data.allMdx.nodes.map((node) => (
+        <article key={node.id}>
+          <h2>{node.frontmatter?.title}</h2>
+          <p>Posted: {node.frontmatter?.date}</p>
+          <p>{node.excerpt}</p>
+        </article>
+      ))}
     </Layout>
   );
 };
 
 export const query = graphql`
   query BlogPage {
-    allFile {
+    allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
-        name
+        frontmatter {
+          date(formatString: "MMMM D, YYYY")
+          title
+        }
+        id
+        excerpt
       }
     }
   }
