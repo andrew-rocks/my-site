@@ -35,7 +35,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
               Home
             </Link>
           </li>
-          <li className={navLinkItem}>
+          {/* <li className={navLinkItem}>
             <Link to="/about" className={navLinkText}>
               About
             </Link>
@@ -44,7 +44,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
             <Link to="/blog" className={navLinkText}>
               Blog
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <main>
