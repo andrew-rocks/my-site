@@ -14,6 +14,7 @@ const IndexPage: React.FC<PageProps> = () => {
         src="../images/headshot.jpeg"
         width={400}
       />
+      <p>Education section here</p>
     </Layout>
   );
 };
