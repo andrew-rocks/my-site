@@ -8,7 +8,7 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout pageTitle={"My Portfolio Website"}>
       <p>Coming soon...</p>
-      <Hero title="Hi, I'm Andrew Rocks" intro="I am a Software Engineer" />
+      <Hero title="Hi, I'm Andrew Rocks" intro="I am a Software Engineer." />
     </Layout>
   );
 };
