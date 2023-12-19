@@ -21,7 +21,10 @@
     "format": "npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@mdx-js/react": "^3.0.0",
+    "@mui/material": "^5.15.0",
     "gatsby": "^5.11.0",
     "gatsby-plugin-image": "^3.12.3",
     "gatsby-plugin-mdx": "^5.12.3",
