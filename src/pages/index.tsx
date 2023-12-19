@@ -3,12 +3,17 @@ import { HeadFC, PageProps } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Hero from "../components/hero";
+import { Card } from "@mui/material";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout pageTitle={"My Portfolio Website"}>
       <p>Coming soon...</p>
+
       <Hero title="Hi, I'm Andrew Rocks" intro="I am a Software Engineer." />
+      <Card variant="outlined" sx={{ p: 2, my: 2 }}>
+        Education card will go here
+      </Card>
     </Layout>
   );
 };
