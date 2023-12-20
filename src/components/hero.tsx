@@ -1,7 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import * as styles from "./hero.module.css";
-import { Card } from "@mui/material";
+import { Paper } from "@mui/material";
 
 type HeroProps = {
   title: string;
@@ -10,9 +10,8 @@ type HeroProps = {
 
 const Hero = ({ title, intro }: HeroProps) => {
   return (
-    <Card
-      raised
-      variant="outlined"
+    <Paper
+      elevation={3}
       sx={{ flexDirection: "row", bgcolor: "#f0f0f0", p: 2 }}
     >
       <section>
@@ -20,7 +19,7 @@ const Hero = ({ title, intro }: HeroProps) => {
           <StaticImage
             alt="Professional headshot of Andrew Rocks, wearing navy suit and green tie"
             src="../images/headshot.jpeg"
-            width={200}
+            width={400}
           />
           <div className={styles.heroContent}>
             <h1>{title}</h1>
@@ -28,7 +27,7 @@ const Hero = ({ title, intro }: HeroProps) => {
           </div>
         </div>
       </section>
-    </Card>
+    </Paper>
   );
 };
 
