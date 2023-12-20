@@ -10,7 +10,10 @@ const IndexPage: React.FC<PageProps> = () => {
     <Layout pageTitle={"My Portfolio Website"}>
       <p>Coming soon...</p>
 
-      <Hero title="Hi, I'm Andrew Rocks" intro="I am a Software Engineer." />
+      <Hero
+        title="Hi, I'm Andrew Rocks"
+        intro="I am a Software Engineer based out of Chicago. I am a generalist who loves building and learning new things."
+      />
       <Card variant="outlined" sx={{ p: 2, my: 2 }}>
         Education card will go here
       </Card>

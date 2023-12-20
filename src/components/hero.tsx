@@ -10,8 +10,12 @@ type HeroProps = {
 
 const Hero = ({ title, intro }: HeroProps) => {
   return (
-    <>
-      <section className={styles.hero}>
+    <Card
+      raised
+      variant="outlined"
+      sx={{ flexDirection: "row", bgcolor: "#f0f0f0", p: 2 }}
+    >
+      <section>
         <div className={styles.container}>
           <StaticImage
             alt="Professional headshot of Andrew Rocks, wearing navy suit and green tie"
@@ -24,7 +28,7 @@ const Hero = ({ title, intro }: HeroProps) => {
           </div>
         </div>
       </section>
-    </>
+    </Card>
   );
 };
 
