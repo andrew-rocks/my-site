@@ -1,13 +1,5 @@
 import * as React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
-import {
-  container,
-  heading,
-  navLinks,
-  navLinkItem,
-  navLinkText,
-  siteTitle,
-} from "./layout.module.css";
 
 interface LayoutProps {
   pageTitle: string;
@@ -26,12 +18,14 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
   `);
 
   return (
-    <div className={container}>
-      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
+    <div className="mx-auto max-w-screen-sm font-sans">
+      <header className="my-12 text-5xl font-bold text-gray-400">
+        {data.site.siteMetadata.title}
+      </header>
       <nav>
-        <ul className={navLinks}>
-          <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
+        <ul className="flex list-none pl-0">
+          <li className="pr-8">
+            <Link to="/" className="text-black">
               Home
             </Link>
           </li>
@@ -48,7 +42,9 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
         </ul>
       </nav>
       <main>
-        <h1 className={heading}>{pageTitle}</h1>
+        <h1 className="text-rebeccapurple my-4 text-2xl font-semibold">
+          {pageTitle}
+        </h1>
         {children}
       </main>
     </div>

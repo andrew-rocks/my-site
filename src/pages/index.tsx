@@ -8,10 +8,8 @@ import { Paper } from "@mui/material";
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout pageTitle={"My Portfolio Website"}>
-      <p>Coming soon...</p>
-
       <Hero
-        title="Hi, I'm Andrew Rocks"
+        title="Hi &#x1F44B; I'm Andrew Rocks"
         intro="I am a Software Engineer based out of Chicago. I am a generalist who loves building and learning new things."
       />
       <Paper elevation={3} sx={{ p: 2, my: 2 }}>
