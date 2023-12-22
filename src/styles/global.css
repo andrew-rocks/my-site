@@ -1,0 +1,7 @@
+/* 
+  In some cases, you may need to disable native CSS linting/validations if your editor is very strict about the syntax it expects in your CSS files. 
+  https://tailwindcss.com/docs/editor-setup
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
