@@ -22,14 +22,14 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
       <header className="my-12 text-5xl font-bold text-gray-400">
         {data.site.siteMetadata.title}
       </header>
-      <nav>
+      {/* <nav>
         <ul className="flex list-none pl-0">
           <li className="pr-8">
             <Link to="/" className="text-black">
               Home
             </Link>
           </li>
-          {/* <li className={navLinkItem}>
+          <li className={navLinkItem}>
             <Link to="/about" className={navLinkText}>
               About
             </Link>
@@ -38,13 +38,13 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
             <Link to="/blog" className={navLinkText}>
               Blog
             </Link>
-          </li> */}
+          </li>
         </ul>
-      </nav>
+      </nav> */}
       <main>
-        <h1 className="text-rebeccapurple my-4 text-2xl font-semibold">
+        {/* <h1 className="text-rebeccapurple my-4 text-2xl font-semibold">
           {pageTitle}
-        </h1>
+        </h1> */}
         {children}
       </main>
     </div>

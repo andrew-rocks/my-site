@@ -8,7 +8,7 @@ type HeroProps = {
 
 const Hero = ({ title, intro }: HeroProps) => {
   return (
-    <section className="mb-10 mt-6">
+    <section className="mb-16">
       <div className="flex rounded-md border-2 p-4 shadow-lg">
         <StaticImage
           className="mr-2 rounded-lg"
