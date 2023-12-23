@@ -16,6 +16,7 @@ export default {
       emerald: colors.emerald,
       indigo: colors.indigo,
       yellow: colors.yellow,
+      violet: colors.violet,
       rebeccapurple: "#663399",
     },
     extend: {
