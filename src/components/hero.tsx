@@ -11,7 +11,7 @@ const Hero = ({ title, intro }: HeroProps) => {
   return (
     <Atropos>
       <section className="mb-16" data-atropos-offset="-6">
-        <div className="flex rounded-md border-2 bg-violet-100 p-4 shadow-lg hover:bg-violet-200">
+        <div className="flex rounded-md border-2 border-violet-300 bg-violet-100 p-4 shadow-lg hover:bg-violet-200">
           <StaticImage
             className=" mr-2 rounded-lg"
             alt="Professional headshot of Andrew Rocks, wearing navy suit and green tie"
