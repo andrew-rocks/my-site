@@ -4,7 +4,9 @@
   </a>
 </p>
 <h1 align="center">
-  Portfolio Website build with Gatsby, React, Typescript, and TailwindCSS
+  Portfolio Website
 </h1>
 
-## Check it out here: <a href="https://andrewrocks.dev">andrewrocks.dev<a>
+<h3>
+  Check it out here: <a href="https://andrewrocks.dev">andrewrocks.dev<a>
+</h3>
