@@ -13,11 +13,23 @@ const IndexPage: React.FC<PageProps> = () => {
         title="Hi &#x1F44B; I'm Andrew Rocks"
         intro="I am a Software Engineer based out of Chicago. I am a generalist who loves building and learning new things."
       />
-      <SectionHeader name="Education" />
+      <SectionHeader name="Education &#x1F4DA;" />
       <Education
         school="University of Notre Dame"
-        description="I received a Bachelor's degree in Computer Science with a minor in Engineering Corporate Practice from the University of Notre Dame in 2022."
-        gpa="3.91"
+        description="I received a Bachelor's degree in Computer Science with a minor in Engineering Corporate Practice."
+        gpa="3.92"
+        honors={[
+          "Magna Cum Laude",
+          "Tau Beta Pi Engineering Honor Society",
+          "Upsilon Pi Epsilon Computing Honor Society",
+        ]}
+        relevantCourses={[
+          "Data Structures",
+          "Design/Analysis of Algorithms",
+          "Programming Paradigms",
+          "Systems Programming",
+          "Operating Systems Principles",
+        ]}
       />
       {/* <SectionHeader name="Work Experience" />
       <SectionHeader name="Skills" />
