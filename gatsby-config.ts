@@ -22,6 +22,12 @@ const config: GatsbyConfig = {
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/favicon_portfolio/android-chrome-512x512.png",
+      },
+    },
   ],
 };
 
