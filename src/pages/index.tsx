@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Hero from "../components/hero";
 import Education from "../components/education";
-import SectionHeader from "../components/sectionHeader";
+import SectionHeader from "../components/common/sectionHeader";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (

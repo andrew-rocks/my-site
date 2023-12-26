@@ -1,6 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import Atropos from "atropos/react";
+import TitleList from "./common/TitleList";
 
 type EducationProps = {
   school: string;
@@ -45,22 +46,10 @@ const Education = ({
             </a>
           </div>
         </div>
-        <p className="pb-2">
-          <strong>Honors:</strong>
-          <br />
-          <em>{honors && honors.join(", ")}</em>
-        </p>
+        {honors && <TitleList title="Honors" list={honors} emphasis />}
         <p className="pb-2">{description}</p>
-        <p className="pb-2">
-          <strong>Relevant Coursework:</strong>
-          <br />
-          {relevantCourses.join(", ")}
-        </p>
-        <p>
-          <strong>Advanced Coursework:</strong>
-          <br />
-          {advancedCourses.join(", ")}
-        </p>
+        <TitleList title="Relevant Coursework" list={relevantCourses} />
+        <TitleList title="Advanced Coursework" list={advancedCourses} />
       </div>
     </Atropos>
   );
