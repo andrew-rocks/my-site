@@ -31,7 +31,7 @@ const Education = ({
             </div>
             <h6>GPA: {gpa}</h6>
           </div>
-          <div data-atropos-offset="-14">
+          <div data-atropos-offset="10">
             <a
               href="https://cse.nd.edu/"
               target="_blank"
