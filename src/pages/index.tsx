@@ -30,6 +30,12 @@ const IndexPage: React.FC<PageProps> = () => {
           "Systems Programming",
           "Operating Systems Principles",
         ]}
+        advancedCourses={[
+          "Droid Building",
+          "Computer Vision",
+          "Cryptography",
+          "Advanced Database Projects",
+        ]}
       />
       {/* <SectionHeader name="Work Experience" />
       <SectionHeader name="Skills" />

@@ -8,6 +8,7 @@ type EducationProps = {
   gpa: string;
   honors: string[] | null;
   relevantCourses: string[];
+  advancedCourses: string[];
 };
 
 const Education = ({
@@ -16,6 +17,7 @@ const Education = ({
   gpa,
   honors,
   relevantCourses,
+  advancedCourses,
 }: EducationProps) => {
   return (
     <Atropos>
@@ -57,8 +59,7 @@ const Education = ({
         <p>
           <strong>Advanced Coursework:</strong>
           <br />
-          Droid Building, Computer Vision, Cryptography, Advanced Database
-          Projects
+          {advancedCourses.join(", ")}
         </p>
       </div>
     </Atropos>
