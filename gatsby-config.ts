@@ -19,6 +19,13 @@ const config: GatsbyConfig = {
         path: `${__dirname}/blog`,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/content/`,
+      },
+    },
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
@@ -28,6 +35,7 @@ const config: GatsbyConfig = {
         icon: "src/images/favicon_portfolio/android-chrome-512x512.png",
       },
     },
+    "gatsby-transformer-json",
   ],
 };
 

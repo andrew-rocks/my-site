@@ -1,0 +1,35 @@
+[
+  {
+    "company": "Pariveda Solutions",
+    "title": "Software Engineer (Consultant 2)",
+    "dates": "Summer 2022 - Present",
+    "description": [
+      "worked on x, y, z projects",
+      "worked on multiple clients",
+      "contributed to internal initiatives"
+    ],
+    "technologies": ["React", ".NET", "SQL"]
+  },
+  {
+    "company": "Deloitte Consulting",
+    "title": "Technology Consulting Summer Scholar",
+    "dates": "Summer 2021",
+    "description": [
+      "worked on x, y, z projects",
+      "worked on multiple clients",
+      "contributed to internal initiatives"
+    ],
+    "technologies": ["Powerpoint"]
+  },
+  {
+    "company": "DICK's Sporting Goods",
+    "title": "Software Engineering Intern",
+    "dates": "Summer 2021",
+    "description": [
+      "worked on x, y, z projects",
+      "worked on multiple clients",
+      "contributed to internal initiatives"
+    ],
+    "technologies": ["Powerpoint"]
+  }
+]
