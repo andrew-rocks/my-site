@@ -8,7 +8,7 @@ type TitleListProps = {
 
 const TitleList = ({ title, list, emphasis }: TitleListProps) => {
   return (
-    <p className="pb-2">
+    <p className="pt-1">
       <strong>{title}:</strong>
       <br />
       {emphasis ? <em>{list.join(", ")}</em> : list.join(", ")}
