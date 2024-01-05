@@ -17,7 +17,8 @@ const TitleIcon = ({ title, subtitle, date }: TitleIconProps) => {
         </div>
         <h6 className="text-lg italic">{subtitle}</h6>
       </div>
-      <div data-atropos-offset="10">
+      {/* TODO: removing this icon div for now, replace with GatsbyImage to make images dynamic */}
+      {/* <div data-atropos-offset="10">
         <a href="https://cse.nd.edu/" target="_blank" rel="noopener noreferrer">
           <StaticImage
             src="../images/notre-dame-logo.png"
@@ -26,7 +27,7 @@ const TitleIcon = ({ title, subtitle, date }: TitleIconProps) => {
             width={70}
           />
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
