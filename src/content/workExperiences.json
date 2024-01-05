@@ -4,32 +4,33 @@
     "title": "Software Engineer (Consultant 2)",
     "dates": "Summer 2022 - Present",
     "description": [
-      "worked on x, y, z projects",
-      "worked on multiple clients",
-      "contributed to internal initiatives"
+      "Increased warehouse claims processing rate by > 175% by migrating business workflow to a React web app",
+      "Automated the validation and processing for an average of $140,600 worth of claims each week, or nearly $6.75 million annually",
+      "Eliminated 30+ second load time of old MVC app by writing performative React code",
+      "Created a web app that calculates suggested retail prices for competitive products for 17+ products based on custom business rules and 60,000 competitor prices",
+      "Decreased price calculation time by 98% by centralizing 26 regional macro workflows into one app, resulting in 1000+ labor hours saved annually",
+      "Improved batch retail processing, reducing price calculation duration by 91% and process memory usage by 58% by leveraging multithreading and data structures"
     ],
-    "technologies": ["React", ".NET", "SQL"]
+    "utilized": ["React", "Typescript", "C#", ".NET", "Angular", "SQL"]
   },
   {
     "company": "Deloitte Consulting",
     "title": "Technology Consulting Summer Scholar",
     "dates": "Summer 2021",
     "description": [
-      "worked on x, y, z projects",
-      "worked on multiple clients",
-      "contributed to internal initiatives"
+      "Interviewed product development teams on their DevSecOps processes, researched best practices, and presented recommendations for improvement to firm partners and managers, solo presentation over an hour",
+      "Streamlined processes for 5+ development teams leading to improved agility and code delivery",
+      "Researched market competition to firm offerings and crafted professional slide decks to convey findings"
     ],
-    "technologies": ["Powerpoint"]
+    "utilized": ["DevSecOps, Salesforce, Powerpoint"]
   },
   {
     "company": "DICK's Sporting Goods",
     "title": "Software Engineering Intern",
     "dates": "Summer 2021",
     "description": [
-      "worked on x, y, z projects",
-      "worked on multiple clients",
-      "contributed to internal initiatives"
+      "Created the API for the MVP of an appointment scheduling app that increased accessibility to previously underutilized services, leading to 100% more revenue generated"
     ],
-    "technologies": ["Powerpoint"]
+    "utilized": ["Java, Spring Boot, MongoDB"]
   }
 ]

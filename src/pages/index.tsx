@@ -6,6 +6,7 @@ import Hero from "../components/hero";
 import Education from "../components/education";
 import SectionHeader from "../components/common/sectionHeader";
 import WorkExperience from "../components/workExperience";
+import Skills from "../components/skills";
 
 const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
   const workExperiences = data.allWorkExperiencesJson.nodes;
@@ -53,11 +54,13 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
               title={workExperience.title}
               dates={workExperience.dates}
               description={workExperience.description}
+              utilized={workExperience.utilized}
             />
           ),
       )}
-      {/* <SectionHeader name="Skills" />
-      <SectionHeader name="Projects" /> */}
+      <SectionHeader name="Skills &#x1F4AA;" />
+      <Skills />
+      {/* <SectionHeader name="Projects" /> */}
     </Layout>
   );
 };
@@ -71,7 +74,7 @@ export const query = graphql`
         title
         dates
         description
-        technologies
+        utilized
       }
     }
   }

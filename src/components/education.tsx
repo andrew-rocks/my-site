@@ -1,7 +1,7 @@
-import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
-import TitleList from "./common/TitleList";
+import TitleList from "./common/titleList";
 import CardWrapper from "./common/cardWrapper";
+import TitleIcon from "./common/titleIcon";
 
 type EducationProps = {
   school: string;
@@ -21,9 +21,10 @@ const Education = ({
   advancedCourses,
 }: EducationProps) => {
   return (
-    <CardWrapper title={school} subtitle={`GPA: ${gpa}`} date="2018 - 2022">
+    <CardWrapper>
+      <TitleIcon title={school} subtitle={`GPA: ${gpa}`} date={"2018 - 2022"} />
       {honors && <TitleList title="Honors" list={honors} emphasis />}
-      <p className="pb-2">{description}</p>
+      <p className="pt-2">{description}</p>
       <TitleList title="Relevant Coursework" list={relevantCourses} />
       <TitleList title="Advanced Coursework" list={advancedCourses} />
     </CardWrapper>
