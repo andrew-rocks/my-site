@@ -1,5 +1,5 @@
 import * as React from "react";
-import TitleList from "./common/titleList";
+import TitleList from "./common/titleWithList";
 import CardWrapper from "./common/cardWrapper";
 import TitleIcon from "./common/titleIcon";
 
