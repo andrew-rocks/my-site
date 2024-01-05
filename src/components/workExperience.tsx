@@ -1,6 +1,6 @@
 import * as React from "react";
 import CardWrapper from "./common/cardWrapper";
-import TitleList from "./common/titleWithList";
+import TitleList from "./common/titleList";
 import TitleIcon from "./common/titleIcon";
 
 type WorkExperienceProps = {
