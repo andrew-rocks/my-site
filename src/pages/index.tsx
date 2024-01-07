@@ -1,5 +1,5 @@
 import * as React from "react";
-import { HeadFC, PageProps, graphql } from "gatsby";
+import { HeadFC, PageProps, graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Hero from "../components/hero";
@@ -7,9 +7,62 @@ import Education from "../components/education";
 import SectionHeader from "../components/common/sectionHeader";
 import WorkExperience from "../components/workExperience";
 import Skills from "../components/skills";
+import { IGatsbyImageData, ImageDataLike, getImage } from "gatsby-plugin-image";
 
 const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
   const workExperiences = data.allWorkExperiencesJson.nodes;
+  const parivedaImage =
+    data?.pariveda?.childImageSharp?.gatsbyImageData ?? null;
+
+  // const getImageNodeByFilename = (
+  //   data: Queries.IndexPageQuery,
+  //   filename: string,
+  // ) => {
+  //   const workExperiencesImagesNodes = data.allWorkExperiencesImages;
+  //   if (!workExperiencesImagesNodes) {
+  //     console.error(`Images in workExperiences directory not found`);
+  //     return null;
+  //   }
+  //   return workExperiencesImagesNodes.find((node) => {
+  //     // Assuming filenames are unique, you can adjust the condition as needed
+  //     return node.childImageSharp.gatsbyImageData.images.fallback.src.includes(
+  //       filename,
+  //     );
+  //   });
+  // };
+
+  // const getWorkExperienceImage = (filename: string) => {
+  //   const imageNode = workExperiencesImages.nodes.find(
+  //     (node: ImageDataLike) =>
+  //       node?.childImageSharp?.gatsbyImageData.images.fallback?.src.includes(
+  //         filename,
+  //       ),
+  //   );
+  //   return getImage(imageNode);
+  // };
+
+  const findImageData = (
+    filename: string,
+    allFileNodes: {
+      readonly childImageSharp: {
+        readonly gatsbyImageData: IGatsbyImageData;
+      } | null;
+    }[],
+  ) => {
+    const imageNode = allFileNodes.find(
+      (node) =>
+        node?.childImageSharp?.gatsbyImageData?.images.fallback?.src.includes(
+          filename,
+        ),
+    );
+
+    if (!imageNode) {
+      console.error(`Image node not found for filename ${filename}`);
+      return null;
+    }
+
+    return imageNode?.childImageSharp?.gatsbyImageData;
+  };
 
   return (
     <Layout pageTitle={"My Portfolio Website"}>
@@ -47,7 +100,9 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
           workExperience.company &&
           workExperience.title &&
           workExperience.dates &&
-          workExperience.description && (
+          workExperience.description &&
+          workExperience.filename &&
+          workExperience.link && (
             <WorkExperience
               key={workExperience.id}
               company={workExperience.company}
@@ -55,6 +110,8 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
               dates={workExperience.dates}
               description={workExperience.description}
               utilized={workExperience.utilized}
+              image={getImage(data.pariveda) ?? null}
+              link={workExperience.link}
             />
           ),
       )}
@@ -75,6 +132,13 @@ export const query = graphql`
         dates
         description
         utilized
+        filename
+        link
+      }
+    }
+    pariveda: file(relativePath: { eq: "workExperiences/pariveda.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED, width: 120, height: 120)
       }
     }
   }

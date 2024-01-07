@@ -11,7 +11,9 @@
       "Decreased price calculation time by 98% by centralizing 26 regional macro workflows into one app, resulting in 1000+ labor hours saved annually",
       "Improved batch retail processing, reducing price calculation duration by 91% and process memory usage by 58% by leveraging multithreading and data structures"
     ],
-    "utilized": ["React", "Typescript", "C#", ".NET", "Angular", "SQL"]
+    "utilized": ["React", "Typescript", "C#", ".NET", "Angular", "SQL"],
+    "filename": "pariveda.png",
+    "link": "https://parivedasolutions.com/"
   },
   {
     "company": "Deloitte Consulting",
@@ -22,7 +24,9 @@
       "Streamlined processes for 5+ development teams leading to improved agility and code delivery",
       "Researched market competition to firm offerings and crafted professional slide decks to convey findings"
     ],
-    "utilized": ["DevSecOps, Salesforce, Powerpoint"]
+    "utilized": ["DevSecOps, Salesforce, Powerpoint"],
+    "filename": "deloitte.png",
+    "link": "https://www2.deloitte.com/us/en/services/consulting.html?icid=top_consulting"
   },
   {
     "company": "DICK's Sporting Goods",
@@ -31,6 +35,8 @@
     "description": [
       "Created the API for the MVP of an appointment scheduling app that increased accessibility to previously underutilized services, leading to 100% more revenue generated"
     ],
-    "utilized": ["Java, Spring Boot, MongoDB"]
+    "utilized": ["Java, Spring Boot, MongoDB"],
+    "filename": "dicks-sporting-goods.jpg",
+    "link": "https://www.dickssportinggoods.com/"
   }
 ]
