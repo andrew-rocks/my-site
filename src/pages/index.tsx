@@ -8,6 +8,7 @@ import SectionHeader from "../components/common/sectionHeader";
 import WorkExperience from "../components/workExperience";
 import Skills from "../components/skills";
 import { IGatsbyImageData, getImage } from "gatsby-plugin-image";
+import Project from "../components/project";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -179,7 +180,8 @@ const IndexPage = () => {
       />
       <SectionHeader name="Skills &#x1F4AA;" />
       <Skills />
-      {/* <SectionHeader name="Projects" /> */}
+      <SectionHeader name="Projects" />
+      <Project />
     </Layout>
   );
 };
