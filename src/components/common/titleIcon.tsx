@@ -22,7 +22,9 @@ const TitleIcon = ({ title, subtitle, date, image, link }: TitleIconProps) => {
       {/* TODO: removing this icon div for now, replace with GatsbyImage to make images dynamic */}
       <div data-atropos-offset="10">
         <a href={link} target="_blank" rel="noopener noreferrer">
-          {image && <GatsbyImage image={image} alt={`${title} - icon`} />}
+          <div className="overflow-hidden rounded-md  ">
+            {image && <GatsbyImage image={image} alt={`${title} - icon`} />}
+          </div>
         </a>
       </div>
     </div>

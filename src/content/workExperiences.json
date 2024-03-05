@@ -7,7 +7,7 @@
       "Increased warehouse claims processing rate by > 175% by migrating business workflow to a React web app",
       "Automated the validation and processing for an average of $140,600 worth of claims each week, or nearly $6.75 million annually",
       "Eliminated 30+ second load time of old MVC app by writing performative React code",
-      "Created a web app that calculates suggested retail prices for competitive products for 17+ products based on custom business rules and 60,000 competitor prices",
+      "Created a web app that calculates suggested retail prices for 17+ competitive products based on custom business rules and 60,000 competitor prices",
       "Decreased price calculation time by 98% by centralizing 26 regional macro workflows into one app, resulting in 1000+ labor hours saved annually",
       "Improved batch retail processing, reducing price calculation duration by 91% and process memory usage by 58% by leveraging multithreading and data structures"
     ],
@@ -36,7 +36,7 @@
       "Created the API for the MVP of an appointment scheduling app that increased accessibility to previously underutilized services, leading to 100% more revenue generated"
     ],
     "utilized": ["Java, Spring Boot, MongoDB"],
-    "filename": "dicks-sporting-goods.jpg",
+    "filename": "dicks-sporting-goods-3.png",
     "link": "https://www.dickssportinggoods.com/"
   }
 ]

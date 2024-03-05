@@ -26,7 +26,7 @@ const Education = ({
     query {
       educationImage: file(relativePath: { eq: "education/notre-dame.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED, width: 70, height: 70)
+          gatsbyImageData(layout: CONSTRAINED, width: 60, height: 60)
         }
       }
     }
