@@ -180,8 +180,8 @@ const IndexPage = () => {
       />
       <SectionHeader name="Skills &#x1F4AA;" />
       <Skills />
-      <SectionHeader name="Projects" />
-      <Project />
+      {/* <SectionHeader name="Projects" />
+      <Project /> */}
     </Layout>
   );
 };
