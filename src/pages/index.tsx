@@ -42,6 +42,11 @@ const IndexPage = () => {
           gatsbyImageData(layout: CONSTRAINED, width: 60, height: 60)
         }
       }
+      droid: file(relativePath: { eq: "projects/tank-droid/tank-droid.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, width: 250, height: 250)
+        }
+      }
     }
   `);
   const workExperiences = data.allWorkExperiencesJson.nodes;
@@ -180,8 +185,21 @@ const IndexPage = () => {
       />
       <SectionHeader name="Skills &#x1F4AA;" />
       <Skills />
-      <SectionHeader name="Projects" />
-      <Project />
+      <SectionHeader name="Projects 🔨" />
+      <Project
+        title="Swipe & Swing"
+        description="Tinder for Golf"
+        repoLink="https://github.com/jaeyoungchang5/swipe-and-swing"
+      />
+      <Project
+        title="Tank Droid"
+        description="A fully functioning tank droid"
+        image={getImage(data.droid) ?? null}
+      />
+      <Project
+        title="PDF parser"
+        description="Scrape data from a PDF using OCR"
+      />
     </Layout>
   );
 };

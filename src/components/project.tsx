@@ -1,23 +1,36 @@
 import React from "react";
 import CardWrapper from "./common/cardWrapper";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
-const Project = () => {
+type ProjectProps = {
+  title: string;
+  description: string;
+  repoLink?: string;
+  image: IGatsbyImageData | null;
+};
+
+const Project = ({ title, description, repoLink, image }: ProjectProps) => {
   return (
     <CardWrapper>
-      <h1 className="text-xl font-semibold">Languages</h1>
-      <p className="pb-3">
-        Typescript, Javascript, C#, Python, Java, C++, C, HTML, CSS
-      </p>
-      <h1 className="text-xl font-semibold">Technologies</h1>
-      <p className="pb-3">
-        React, .NET, AWS, Angular, Spring Boot, SQL (multiple versions),
-        GraphQL, Tailwind CSS, MongoDB
-      </p>
-      <h1 className="text-xl font-semibold">Other</h1>
-      <p>
-        API design, Object-Oriented Programming, Component-based UI design, UX
-        design, Agile
-      </p>
+      <h1 className="text-xl font-semibold">{title}</h1>
+      <p className="pb-3">{description}</p>
+      {image && (
+        <GatsbyImage
+          className="overflow-hidden rounded-xl"
+          image={image}
+          alt={`${title} - image`}
+        />
+      )}
+      {repoLink && (
+        <a
+          href={repoLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="pb-3"
+        >
+          {repoLink}
+        </a>
+      )}
     </CardWrapper>
   );
 };
