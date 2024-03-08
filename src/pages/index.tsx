@@ -25,6 +25,15 @@ const IndexPage = () => {
           link
         }
       }
+      allProjectsJson {
+        nodes {
+          id
+          title
+          description
+          utilized
+          repoLink
+        }
+      }
       pariveda: file(relativePath: { eq: "workExperiences/pariveda.png" }) {
         childImageSharp {
           gatsbyImageData(layout: CONSTRAINED, width: 60, height: 60)
@@ -42,14 +51,41 @@ const IndexPage = () => {
           gatsbyImageData(layout: CONSTRAINED, width: 60, height: 60)
         }
       }
+      mySite: file(relativePath: { eq: "projects/my-site/my-site.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, width: 300, height: 220)
+        }
+      }
+      swipeAndSwing: file(
+        relativePath: { eq: "projects/swipe-and-swing/swipe-and-swing.png" }
+      ) {
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, width: 180, height: 360)
+        }
+      }
       droid: file(relativePath: { eq: "projects/tank-droid/tank-droid.png" }) {
         childImageSharp {
           gatsbyImageData(layout: CONSTRAINED, width: 250, height: 250)
         }
       }
+      pdfScraper: file(
+        relativePath: { eq: "projects/pdf-scraper/pdf-scraper.png" }
+      ) {
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, width: 200, height: 200)
+        }
+      }
+      laneDetection: file(
+        relativePath: { eq: "projects/lane-detection/lane-detection.png" }
+      ) {
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, width: 200, height: 200)
+        }
+      }
     }
   `);
   const workExperiences = data.allWorkExperiencesJson.nodes;
+  const projects = data.allProjectsJson.nodes;
 
   // const getImageNodeByFilename = (
   //   data: Queries.IndexPageQuery,
@@ -187,18 +223,39 @@ const IndexPage = () => {
       <Skills />
       <SectionHeader name="Projects 🔨" />
       <Project
-        title="Swipe & Swing"
-        description="Tinder for Golf"
-        repoLink="https://github.com/jaeyoungchang5/swipe-and-swing"
+        title={projects[0].title}
+        description={projects[0].description}
+        utilized={projects[0].utilized}
+        image={getImage(data.mySite) ?? null}
+        repoLink={projects[0].repoLink}
       />
       <Project
-        title="Tank Droid"
-        description="A fully functioning tank droid"
+        title={projects[1].title}
+        description={projects[1].description}
+        utilized={projects[1].utilized}
+        image={getImage(data.swipeAndSwing) ?? null}
+        repoLink={projects[1].repoLink}
+      />
+      <Project
+        title={projects[2].title}
+        description={projects[2].description}
+        utilized={projects[2].utilized}
         image={getImage(data.droid) ?? null}
+        repoLink={projects[2].repoLink}
       />
       <Project
-        title="PDF parser"
-        description="Scrape data from a PDF using OCR"
+        title={projects[3].title}
+        description={projects[3].description}
+        utilized={projects[3].utilized}
+        image={getImage(data.pdfScraper) ?? null}
+        repoLink={projects[3].repoLink}
+      />
+      <Project
+        title={projects[4].title}
+        description={projects[4].description}
+        utilized={projects[4].utilized}
+        image={getImage(data.laneDetection) ?? null}
+        repoLink={projects[4].repoLink}
       />
     </Layout>
   );

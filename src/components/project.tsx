@@ -1,36 +1,87 @@
 import React from "react";
 import CardWrapper from "./common/cardWrapper";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
+import LinkButton from "./common/LinkButton";
+import { Dialog } from "@material-ui/core";
+import TitleList from "./common/titleList";
 
 type ProjectProps = {
   title: string;
-  description: string;
-  repoLink?: string;
+  description: string[];
+  utilized: string[];
   image: IGatsbyImageData | null;
+  repoLink?: string;
+  dialogImages?: (IGatsbyImageData | null)[] | null;
 };
 
-const Project = ({ title, description, repoLink, image }: ProjectProps) => {
+const Project = ({
+  title,
+  description,
+  utilized,
+  image,
+  repoLink,
+  dialogImages,
+}: ProjectProps) => {
+  const [dialogOpen, setDialogOpen] = React.useState(false);
+
+  const handleOpenDialog = () => {
+    setDialogOpen(true);
+  };
+
+  const handleCloseDialog = () => {
+    setDialogOpen(false);
+  };
+
   return (
-    <CardWrapper>
-      <h1 className="text-xl font-semibold">{title}</h1>
-      <p className="pb-3">{description}</p>
-      {image && (
-        <GatsbyImage
-          className="overflow-hidden rounded-xl"
-          image={image}
-          alt={`${title} - image`}
-        />
-      )}
-      {repoLink && (
-        <a
-          href={repoLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="pb-3"
+    <CardWrapper flex>
+      <div className="flex w-full flex-row justify-between">
+        <div
+          id="content"
+          className="mr-5 flex h-full w-2/3 flex-col justify-between"
         >
-          {repoLink}
-        </a>
-      )}
+          <div>
+            <h1 className="text-xl font-semibold">{title}</h1>
+            <ul className="list-disc pl-4 pt-1">
+              {description.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            {utilized && (
+              <div className="pb-3">
+                <TitleList
+                  title="Utilized"
+                  list={utilized.filter(
+                    (item): item is string => item !== null,
+                  )}
+                  emphasis
+                />
+              </div>
+            )}
+            {repoLink && (
+              <LinkButton text="View Repo" link={repoLink} openInNewTab />
+            )}
+            {dialogImages && (
+              <LinkButton text="Check it out" openDialog={handleOpenDialog} />
+            )}
+          </div>
+        </div>
+        <div
+          id="image"
+          className="flex w-1/3 items-center justify-center"
+          data-atropos-offset="6"
+        >
+          {image && (
+            <GatsbyImage
+              className="overflow-hidden rounded-xl drop-shadow-lg"
+              image={image}
+              alt={`${title} - image`}
+            />
+          )}
+        </div>
+      </div>
+      {dialogImages && <Dialog open={dialogOpen} onClose={handleCloseDialog} />}
     </CardWrapper>
   );
 };
