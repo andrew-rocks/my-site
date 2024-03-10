@@ -245,7 +245,7 @@ const IndexPage = () => {
         // todo: move links to json file
         mediaLinks={[
           "https://www.youtube.com/embed/WbfEbOObnso",
-          "https://www.youtube.com/embed/A_-2YSV1a8Y",
+          // "https://www.youtube.com/embed/A_-2YSV1a8Y",
         ]}
       />
       <Project
