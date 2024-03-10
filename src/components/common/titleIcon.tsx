@@ -19,12 +19,16 @@ const TitleIcon = ({ title, subtitle, date, image, link }: TitleIconProps) => {
         </div>
         <h6 className="text-lg italic">{subtitle}</h6>
       </div>
-      {/* TODO: removing this icon div for now, replace with GatsbyImage to make images dynamic */}
       <div data-atropos-offset="10">
         <a href={link} target="_blank" rel="noopener noreferrer">
-          <div className="overflow-hidden rounded-md  ">
-            {image && <GatsbyImage image={image} alt={`${title} - icon`} />}
-          </div>
+          {image && (
+            <GatsbyImage
+              className="rounded-md"
+              style={{ position: "relative", right: "-5px", top: "-5px" }}
+              image={image}
+              alt={`${title} - icon`}
+            />
+          )}
         </a>
       </div>
     </div>

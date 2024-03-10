@@ -6,7 +6,7 @@ type SectionHeaderProps = {
 
 const SectionHeader = ({ name }: SectionHeaderProps) => {
   return (
-    <h1 className="text-rebeccapurple mb-2 pl-2 text-2xl font-bold">{name}</h1>
+    <h1 className="mb-2 pl-2 text-2xl font-bold text-rebeccapurple">{name}</h1>
   );
 };
 

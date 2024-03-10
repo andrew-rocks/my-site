@@ -18,7 +18,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
   `);
 
   return (
-    <div className="mx-auto max-w-screen-sm font-sans">
+    <div className="mx-auto max-w-screen-md font-sans">
       <header className="my-12 text-5xl font-bold text-gray-400">
         {data.site.siteMetadata.title}
       </header>

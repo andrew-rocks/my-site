@@ -1,0 +1,61 @@
+[
+  {
+    "title": "My Personal Website (this site)",
+    "description": [
+      "Designed and developed a personal website to showcase my projects and experiences"
+    ],
+    "utilized": [
+      "React",
+      "Typescript",
+      "Gatsby",
+      "TailwindCSS",
+      "GraphQL",
+      "Material UI"
+    ],
+    "repoLink": "https://github.com/andrew-rocks/my-site"
+  },
+  {
+    "title": "Swipe & Swing",
+    "description": [
+      "Created an Tinder-Style mobile app for golfers to find other similar golfers to play with and schedule tee times",
+      "Earned 1st place award in class for best application",
+      "Designed and implemented an Oracle SQL database to store and manage application data",
+      "Developed a Flask API to handle requests and manage interactions between the database and the front-end applications",
+      "Created a web application in React to allow golf courses to manage tee times created through the mobile app"
+    ],
+    "utilized": [
+      "Flask",
+      "Python",
+      "React",
+      "React Native",
+      "Typescript",
+      "Oracle SQL"
+    ],
+    "repoLink": "https://github.com/jaeyoungchang5/swipe-and-swing"
+  },
+  {
+    "title": "Tank Droid",
+    "description": [
+      "Managed a semester-long project to build a fully-functioning droid, with coordinated motion, sound, lighting, and theming that could perform routines and navigate autonomously",
+      "Earned 1st place award in class for best droid",
+      "Programmed using the C/Arduino language, designed and assembled 21+ custom parts with CAD software and 3D printers"
+    ],
+    "utilized": ["C/Arduino", "CAD"]
+  },
+  {
+    "title": "PDF Data Scraper",
+    "description": [
+      "Applied OCR (optical character recognition) libraries to convert 20+ page PDFs to text",
+      "Leveraged custom regular expressions to extract desired fields to json files"
+    ],
+    "utilized": ["Python", "Tesseract & Textra OCR Engines"]
+  },
+  {
+    "title": "Road Lane Detection (Computer Vision)",
+    "description": [
+      "Crafted a road lane detection algorithm to find and mark road lanes from vehicle dashcam footage",
+      "Utilized canny edge detection, a Hough transform, and predictive filtering operations supported by the OpenCV package in Python"
+    ],
+    "utilized": ["Python", "OpenCV"]
+  }
+]
