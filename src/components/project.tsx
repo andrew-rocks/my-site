@@ -2,8 +2,8 @@ import React from "react";
 import CardWrapper from "./common/cardWrapper";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import LinkButton from "./common/LinkButton";
-import { Dialog } from "@material-ui/core";
 import TitleList from "./common/titleList";
+import MediaDialog from "./common/contentDialog";
 
 type ProjectProps = {
   title: string;
@@ -11,7 +11,8 @@ type ProjectProps = {
   utilized: string[];
   image: IGatsbyImageData | null;
   repoLink?: string;
-  dialogImages?: (IGatsbyImageData | null)[] | null;
+  mediaLinks?: string[] | null;
+  // dialogImages?: (IGatsbyImageData | null)[] | null;
 };
 
 const Project = ({
@@ -20,7 +21,7 @@ const Project = ({
   utilized,
   image,
   repoLink,
-  dialogImages,
+  mediaLinks, // dialogImages,
 }: ProjectProps) => {
   const [dialogOpen, setDialogOpen] = React.useState(false);
 
@@ -62,7 +63,7 @@ const Project = ({
             {repoLink && (
               <LinkButton text="View Repo" link={repoLink} openInNewTab />
             )}
-            {dialogImages && (
+            {mediaLinks && (
               <LinkButton text="Check it out" openDialog={handleOpenDialog} />
             )}
           </div>
@@ -81,7 +82,13 @@ const Project = ({
           )}
         </div>
       </div>
-      {dialogImages && <Dialog open={dialogOpen} onClose={handleCloseDialog} />}
+      {mediaLinks && (
+        <MediaDialog
+          dialogOpen={dialogOpen}
+          handleCloseDialog={handleCloseDialog}
+          mediaLinks={mediaLinks}
+        />
+      )}
     </CardWrapper>
   );
 };

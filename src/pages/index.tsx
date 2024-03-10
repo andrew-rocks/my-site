@@ -60,7 +60,7 @@ const IndexPage = () => {
         relativePath: { eq: "projects/swipe-and-swing/swipe-and-swing.png" }
       ) {
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED, width: 180, height: 360)
+          gatsbyImageData(layout: CONSTRAINED, width: 160, height: 320)
         }
       }
       droid: file(relativePath: { eq: "projects/tank-droid/tank-droid.png" }) {
@@ -234,7 +234,7 @@ const IndexPage = () => {
         description={projects[1].description}
         utilized={projects[1].utilized}
         image={getImage(data.swipeAndSwing) ?? null}
-        repoLink={projects[1].repoLink}
+        // repoLink={projects[1].repoLink}
       />
       <Project
         title={projects[2].title}
@@ -242,6 +242,11 @@ const IndexPage = () => {
         utilized={projects[2].utilized}
         image={getImage(data.droid) ?? null}
         repoLink={projects[2].repoLink}
+        // todo: move links to json file
+        mediaLinks={[
+          "https://www.youtube.com/embed/WbfEbOObnso",
+          "https://www.youtube.com/embed/A_-2YSV1a8Y",
+        ]}
       />
       <Project
         title={projects[3].title}
