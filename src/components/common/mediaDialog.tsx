@@ -2,6 +2,7 @@ import React from "react";
 import { Dialog, DialogContent } from "@material-ui/core";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import Video from "./video";
+import Carousel from "react-material-ui-carousel";
 
 interface MediaDialogProps {
   dialogOpen: boolean;
@@ -21,11 +22,11 @@ const MediaDialog: React.FC<MediaDialogProps> = ({
       open={dialogOpen}
       onClose={handleCloseDialog}
     >
-      <DialogContent className="flex items-center justify-center">
+      <Carousel animation="slide" navButtonsAlwaysVisible autoPlay={false}>
         {mediaLinks.map((mediaLink) => (
           <Video key={mediaLink} src={mediaLink} />
         ))}
-      </DialogContent>
+      </Carousel>
     </Dialog>
   );
 };

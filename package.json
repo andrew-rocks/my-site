@@ -36,7 +36,8 @@
     "gatsby-transformer-json": "^5.13.0",
     "gatsby-transformer-sharp": "^5.12.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-material-ui-carousel": "^3.4.2"
   },
   "devDependencies": {
     "@stylistic/eslint-plugin": "^1.2.0",
