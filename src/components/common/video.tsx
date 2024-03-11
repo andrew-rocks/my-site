@@ -12,8 +12,9 @@ const Video: React.FC<VideoProps> = ({
   height = "500",
 }) => {
   return (
-    <div className="mr-8">
+    <div className="flex items-center justify-center">
       <iframe
+        className="pt-5"
         src={src}
         title="Video Player"
         width={width}
