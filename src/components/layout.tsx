@@ -1,5 +1,7 @@
 import * as React from "react";
-import { Link, graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
+import { Link } from "react-scroll";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 interface LayoutProps {
   pageTitle: string;
@@ -18,10 +20,22 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
   `);
 
   return (
-    <div className="mx-auto max-w-screen-md font-sans">
+    <div id="top" className="mx-auto max-w-screen-md font-sans">
       <header className="my-12 text-5xl font-bold text-gray-400">
         {data.site.siteMetadata.title}
       </header>
+      <div className="sidebar hidden">
+        <Link to="section1" smooth={true}>
+          Section 1
+        </Link>
+        <Link to="section2" smooth={true}>
+          Section 2
+        </Link>
+        <Link to="section3" smooth={true}>
+          Section 3
+        </Link>
+        {/* Add more links as needed */}
+      </div>
       {/* <nav>
         <ul className="flex list-none pl-0">
           <li className="pr-8">
@@ -47,6 +61,9 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
         </h1> */}
         {children}
       </main>
+      <button className="mb-10" onClick={() => scrollTo("#top")}>
+        <u>Scroll to top ↑</u>
+      </button>
     </div>
   );
 };

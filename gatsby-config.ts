@@ -43,6 +43,7 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-transformer-json",
+    "gatsby-plugin-smoothscroll",
   ],
 };
 
