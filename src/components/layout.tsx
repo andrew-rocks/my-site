@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { Link } from "react-scroll";
 import scrollTo from "gatsby-plugin-smoothscroll";
+import Sidebar from "./sidebar";
 
 interface LayoutProps {
   pageTitle: string;
@@ -24,18 +24,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
       <header className="my-12 text-5xl font-bold text-gray-400">
         {data.site.siteMetadata.title}
       </header>
-      <div className="sidebar hidden">
-        <Link to="section1" smooth={true}>
-          Section 1
-        </Link>
-        <Link to="section2" smooth={true}>
-          Section 2
-        </Link>
-        <Link to="section3" smooth={true}>
-          Section 3
-        </Link>
-        {/* Add more links as needed */}
-      </div>
+      <Sidebar />
       {/* <nav>
         <ul className="flex list-none pl-0">
           <li className="pr-8">

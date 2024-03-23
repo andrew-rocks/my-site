@@ -143,7 +143,7 @@ const IndexPage = () => {
         title="Hi &#x1F44B; I'm Andrew Rocks"
         intro="I am a Software Engineer based out of Chicago. I am a generalist who loves building and learning new things."
       />
-      <SectionHeader name="Education &#x1F4DA;" />
+      <SectionHeader id="education" name="Education &#x1F4DA;" />
       <Education
         school="University of Notre Dame"
         description="I earned a Bachelor's degree in Computer Science with a minor in Engineering Corporate Practice."
@@ -167,7 +167,7 @@ const IndexPage = () => {
           "Advanced Database Projects",
         ]}
       />
-      <SectionHeader name="Work Experience &#x1F3E2;" />
+      <SectionHeader id="workExperience" name="Work Experience &#x1F3E2;" />
       {/* {workExperiences.map(
         (workExperience) =>
           workExperience.company &&
@@ -219,9 +219,9 @@ const IndexPage = () => {
         image={getImage(data.dicksSportingGoods) ?? null}
         link={workExperiences[2].link}
       />
-      <SectionHeader name="Skills &#x1F4AA;" />
+      <SectionHeader id="skills" name="Skills &#x1F4AA;" />
       <Skills />
-      <SectionHeader name="Projects 🔨" />
+      <SectionHeader id="projects" name="Projects 🔨" />
       <Project
         title={projects[0].title}
         description={projects[0].description}
