@@ -2,6 +2,8 @@ import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Sidebar from "./sidebar";
 import Footer from "./footer";
+import { StaticImage } from "gatsby-plugin-image";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 interface LayoutProps {
   pageTitle: string;
@@ -21,8 +23,20 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
 
   return (
     <div id="top" className="mx-auto max-w-screen-md font-sans">
-      <header className="my-12 text-5xl font-bold text-gray-400">
-        {data.site.siteMetadata.title}
+      <header>
+        <div id="logo" className=" fixed left-10 hidden lg:block">
+          <button id="header-icon" onClick={() => scrollTo("#top")}>
+            <StaticImage
+              height={70}
+              width={70}
+              src="../images/favicon_portfolio/android-chrome-192x192.png"
+              alt="Portfolio logo"
+            />
+          </button>
+        </div>
+        <div className="my-6 text-5xl font-bold text-gray-400">
+          {data.site.siteMetadata.title}
+        </div>
       </header>
       <Sidebar />
       {/* <nav>
