@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import scrollTo from "gatsby-plugin-smoothscroll";
 import Sidebar from "./sidebar";
+import Footer from "./footer";
 
 interface LayoutProps {
   pageTitle: string;
@@ -50,9 +50,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
         </h1> */}
         {children}
       </main>
-      <button className="mb-10" onClick={() => scrollTo("#top")}>
-        <u>Scroll to top ↑</u>
-      </button>
+      <Footer />
     </div>
   );
 };
