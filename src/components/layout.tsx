@@ -1,5 +1,7 @@
 import * as React from "react";
-import { Link, graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
+import Sidebar from "./sidebar";
+import Footer from "./footer";
 
 interface LayoutProps {
   pageTitle: string;
@@ -18,10 +20,11 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
   `);
 
   return (
-    <div className="mx-auto max-w-screen-md font-sans">
+    <div id="top" className="mx-auto max-w-screen-md font-sans">
       <header className="my-12 text-5xl font-bold text-gray-400">
         {data.site.siteMetadata.title}
       </header>
+      <Sidebar />
       {/* <nav>
         <ul className="flex list-none pl-0">
           <li className="pr-8">
@@ -47,6 +50,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
         </h1> */}
         {children}
       </main>
+      <Footer />
     </div>
   );
 };
