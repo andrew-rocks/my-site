@@ -1,9 +1,9 @@
 import React from "react";
 import CardWrapper from "./common/cardWrapper";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
-import LinkButton from "./common/LinkButton";
 import TitleList from "./common/titleList";
 import MediaDialog from "./common/mediaDialog";
+import LinkButton from "./common/linkButton";
 
 type ProjectProps = {
   title: string;
