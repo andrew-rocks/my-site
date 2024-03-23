@@ -1,55 +1,18 @@
 import * as React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import Sidebar from "./sidebar";
 import Footer from "./footer";
+import Header from "./header";
 
 interface LayoutProps {
-  pageTitle: string;
   children: React.ReactNode;
 }
 
-const Layout = ({ pageTitle, children }: LayoutProps) => {
-  const data = useStaticQuery(graphql`
-    query MyQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
+const Layout = ({ children }: LayoutProps) => {
   return (
     <div id="top" className="mx-auto max-w-screen-md font-sans">
-      <header className="my-12 text-5xl font-bold text-gray-400">
-        {data.site.siteMetadata.title}
-      </header>
+      <Header />
       <Sidebar />
-      {/* <nav>
-        <ul className="flex list-none pl-0">
-          <li className="pr-8">
-            <Link to="/" className="text-black">
-              Home
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
-              About
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/blog" className={navLinkText}>
-              Blog
-            </Link>
-          </li>
-        </ul>
-      </nav> */}
-      <main>
-        {/* <h1 className="text-rebeccapurple my-4 text-2xl font-semibold">
-          {pageTitle}
-        </h1> */}
-        {children}
-      </main>
+      <main>{children}</main>
       <Footer />
     </div>
   );
