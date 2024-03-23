@@ -1,5 +1,6 @@
-import { Button } from "@material-ui/core";
+import { Button, ThemeProvider } from "@mui/material";
 import React from "react";
+import { buttonTheme } from "../../themes/buttonTheme";
 
 interface LinkButtonProps {
   link?: string;
@@ -26,9 +27,11 @@ const LinkButton: React.FC<LinkButtonProps> = ({
     }
   };
   return (
-    <Button variant="contained" color="primary" onClick={handleClick}>
-      {text}
-    </Button>
+    <ThemeProvider theme={buttonTheme}>
+      <Button variant="contained" color="primary" onClick={handleClick}>
+        {text}
+      </Button>
+    </ThemeProvider>
   );
 };
 export default LinkButton;

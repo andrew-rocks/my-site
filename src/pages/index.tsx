@@ -1,5 +1,5 @@
 import * as React from "react";
-import { HeadFC, PageProps, graphql, useStaticQuery } from "gatsby";
+import { HeadFC, graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Hero from "../components/hero";
@@ -9,6 +9,7 @@ import WorkExperience from "../components/workExperience";
 import Skills from "../components/skills";
 import { IGatsbyImageData, getImage } from "gatsby-plugin-image";
 import Project from "../components/project";
+import ContactMeButton from "../components/buttons/contactMeButton";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -143,6 +144,7 @@ const IndexPage = () => {
         title="Hi &#x1F44B; I'm Andrew Rocks"
         intro="I am a Software Engineer based out of Chicago. I am a generalist who loves building and learning new things."
       />
+      <ContactMeButton />
       <SectionHeader id="education" name="Education &#x1F4DA;" />
       <Education
         school="University of Notre Dame"
@@ -242,7 +244,7 @@ const IndexPage = () => {
         utilized={projects[2].utilized}
         image={getImage(data.droid) ?? null}
         repoLink={projects[2].repoLink}
-        // todo: move links to json file
+        // TODO: move links to json file
         mediaLinks={[
           "https://www.youtube.com/embed/A_-2YSV1a8Y",
           "https://www.youtube.com/embed/WbfEbOObnso",

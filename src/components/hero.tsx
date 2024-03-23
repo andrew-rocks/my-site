@@ -20,10 +20,10 @@ const Hero = ({ title, intro }: HeroProps) => {
             height={300}
           />
           <div
-            className="flex flex-col justify-center text-center"
+            className="flex flex-col justify-center px-4 text-center"
             data-atropos-offset="-6"
           >
-            <h1 className="text-rebeccapurple text-3xl font-bold">{title}</h1>
+            <h1 className="text-3xl font-bold text-rebeccapurple">{title}</h1>
             <p className="mt-2">{intro}</p>
           </div>
         </div>
