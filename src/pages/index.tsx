@@ -138,7 +138,7 @@ const IndexPage = () => {
   };
 
   return (
-    <Layout pageTitle={"My Portfolio Website"}>
+    <Layout>
       <Hero
         title="Hi &#x1F44B; I'm Andrew Rocks"
         intro="I am a Software Engineer based out of Chicago. I am a generalist who loves building and learning new things."
