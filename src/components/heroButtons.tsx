@@ -4,8 +4,7 @@ import scrollTo from "gatsby-plugin-smoothscroll";
 
 const HeroButtons: React.FC = () => {
   const handleViewResumeClick = () => {
-    console.log("View Resume clicked");
-    //window.open("/AndrewRocksResume.pdf", "_blank");
+    window.open("Andrew_Rocks_resume_2024.pdf", "_blank");
   };
 
   const handleContactMeClick = () =>
