@@ -1,6 +1,5 @@
-import { Button, ThemeProvider } from "@mui/material";
 import React from "react";
-import { buttonTheme } from "../../themes/buttonTheme";
+import BaseButton from "../buttons/baseButton";
 
 interface LinkButtonProps {
   link?: string;
@@ -26,17 +25,11 @@ const LinkButton: React.FC<LinkButtonProps> = ({
       openDialog();
     }
   };
+
   return (
-    <ThemeProvider theme={buttonTheme}>
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={handleClick}
-        sx={{ backgroundColor: (theme) => theme.palette.primary.main }}
-      >
-        {text}
-      </Button>
-    </ThemeProvider>
+    <>
+      <BaseButton text={text} onClick={handleClick} />
+    </>
   );
 };
 export default LinkButton;
