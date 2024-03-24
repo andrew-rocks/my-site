@@ -9,9 +9,6 @@ import WorkExperience from "../components/workExperience";
 import Skills from "../components/skills";
 import { IGatsbyImageData, getImage } from "gatsby-plugin-image";
 import Project from "../components/project";
-import ContactMeButton from "../components/buttons/contactMeButton";
-import ViewResumeButton from "../components/buttons/viewResumeButton";
-import BaseButton from "../components/buttons/baseButton";
 import HeroButtons from "../components/heroButtons";
 
 const IndexPage = () => {
