@@ -9,7 +9,7 @@ import WorkExperience from "../components/workExperience";
 import Skills from "../components/skills";
 import { IGatsbyImageData, getImage } from "gatsby-plugin-image";
 import Project from "../components/project";
-import ContactMeButton from "../components/buttons/contactMeButton";
+import HeroButtons from "../components/heroButtons";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -144,7 +144,7 @@ const IndexPage = () => {
         title="Hi &#x1F44B; I'm Andrew Rocks"
         intro="I am a Software Engineer based out of Chicago. I am a generalist who loves building and learning new things."
       />
-      <ContactMeButton />
+      <HeroButtons />
       <SectionHeader id="education" name="Education &#x1F4DA;" />
       <Education
         school="University of Notre Dame"
