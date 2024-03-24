@@ -10,7 +10,12 @@ const ViewResumeButton: React.FC = () => {
 
   return (
     <ThemeProvider theme={buttonTheme}>
-      <Button variant="contained" color="primary" onClick={handleClick}>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={handleClick}
+        sx={{ backgroundColor: (theme) => theme.palette.primary.main }}
+      >
         View Resume
       </Button>
     </ThemeProvider>

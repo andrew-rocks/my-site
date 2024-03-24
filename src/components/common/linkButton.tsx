@@ -28,7 +28,12 @@ const LinkButton: React.FC<LinkButtonProps> = ({
   };
   return (
     <ThemeProvider theme={buttonTheme}>
-      <Button variant="contained" color="primary" onClick={handleClick}>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={handleClick}
+        sx={{ backgroundColor: (theme) => theme.palette.primary.main }}
+      >
         {text}
       </Button>
     </ThemeProvider>
