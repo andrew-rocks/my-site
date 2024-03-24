@@ -5,7 +5,7 @@ import { buttonTheme } from "../../themes/buttonTheme";
 const ContactMeButton: React.FC = () => {
   return (
     <ThemeProvider theme={buttonTheme}>
-      <div className="-mt-4 mb-4">
+      <div className="mb-4">
         <Button
           variant="contained"
           color="primary"

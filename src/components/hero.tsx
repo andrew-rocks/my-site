@@ -10,7 +10,7 @@ type HeroProps = {
 const Hero = ({ title, intro }: HeroProps) => {
   return (
     <Atropos>
-      <section className="mb-10" data-atropos-offset="-6">
+      <section className="mb-6" data-atropos-offset="-6">
         <div className="flex rounded-md border-2 border-violet-300 bg-violet-100 p-4 shadow-lg hover:bg-violet-200">
           <StaticImage
             className=" mr-2 rounded-lg"
