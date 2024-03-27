@@ -46,7 +46,7 @@
     "title": "PDF Data Scraper",
     "description": [
       "Applied OCR (optical character recognition) libraries to convert 20+ page PDFs to text",
-      "Leveraged custom regular expressions to extract desired fields to json files"
+      "Leveraged custom regular expressions to extract useful data from legal documents into to json files"
     ],
     "utilized": ["Python", "Tesseract & Textra OCR Engines"]
   },

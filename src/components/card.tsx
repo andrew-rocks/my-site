@@ -11,7 +11,7 @@ const Card = (props: CardProps) => {
   const { title, subtitle, body, footer } = props;
 
   return (
-    <div className="card">
+    <div className="card border-solid">
       <h5>{title}</h5>
       <p>{subtitle}</p>
       <p>{body}</p>

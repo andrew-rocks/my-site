@@ -236,7 +236,7 @@ const IndexPage = () => {
         description={projects[1].description}
         utilized={projects[1].utilized}
         image={getImage(data.swipeAndSwing) ?? null}
-        // repoLink={projects[1].repoLink}
+        repoLink={projects[1].repoLink}
       />
       <Project
         title={projects[2].title}
