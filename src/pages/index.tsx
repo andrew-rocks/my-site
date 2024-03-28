@@ -142,7 +142,7 @@ const IndexPage = () => {
     <Layout>
       <Hero
         title="Hi &#x1F44B; I'm Andrew Rocks"
-        intro="I am a Software Engineer based out of Chicago. I am a generalist who loves building and learning new things."
+        intro="I am a Software Engineer with a passion for building and lifelong learning. I follow a builder's mindset when delivering high-quality, user-centric applications. I currently am based out of Chicago and work at Pariveda Solutions."
       />
       <HeroButtons />
       <SectionHeader id="education" name="Education &#x1F4DA;" />
