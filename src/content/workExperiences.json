@@ -4,6 +4,8 @@
     "title": "Software Engineer (Consultant 2)",
     "dates": "Summer 2022 - Present",
     "description": [
+      "Architected the combination of multiple microservices to increase the number of flights viewable to contact center agents by over 250%, feature used by over 4,000 agents",
+      "Led testing and deployment for a new feature, triaging and resolving 30+ bugs to ensure a smooth launch",
       "Increased warehouse claims processing rate by > 175% by migrating business workflow to a React web app",
       "Automated the validation and processing for an average of $140,600 worth of claims each week, or nearly $6.75 million annually",
       "Eliminated 30+ second load time of old MVC app by writing performative React code",
