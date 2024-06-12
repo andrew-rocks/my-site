@@ -6,12 +6,12 @@ const Skills = () => {
     <CardWrapper>
       <h1 className="text-xl font-semibold">Languages</h1>
       <p className="pb-3">
-        Typescript, Javascript, C#, Python, Java, C++, C, HTML, CSS
+        TypeScript, JavaScript, C#, Python, Java, C, C++, HTML, CSS
       </p>
       <h1 className="text-xl font-semibold">Technologies</h1>
       <p className="pb-3">
-        React, .NET, AWS, Angular, Spring Boot, SQL (multiple versions),
-        GraphQL, Tailwind CSS, MongoDB
+        React, .NET, Angular, GraphQL, SQL, AWS, Next.js, Spring Boot, Flask,
+        Gatsby, Tailwind CSS, MongoDB, Material UI
       </p>
       <h1 className="text-xl font-semibold">Other</h1>
       <p>
